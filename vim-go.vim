@@ -23,11 +23,11 @@ let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
 let g:go_fmt_experimental = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+" let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_deadline = "2s"
 let g:go_metalinter_autosave=1
-let g:go_metalinter_autosave_enabled=['golint', 'govet']
-let g:go_fmt_command = "golines"
+" let g:go_metalinter_autosave_enabled=['golint', 'vet']
+" let g:go_fmt_command = "golines"
 " let g:go_fmt_options = {
 "         'golines': '-m 128',
 "     }
