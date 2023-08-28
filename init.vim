@@ -64,6 +64,14 @@ map <leader>vz :VimuxZoomRunner<CR>
 	set foldlevel=99
 	" Enable folding with the spacebar
 	nnoremap <space> za
+    " quickly exit
+    nnoremap <leader>q <CMD>q<CR>
+
+    " change buffer
+    nnoremap <leader>bn :bnext<CR>
+    nnoremap <leader>bp :bprevious<CR>
+    " close buffer
+    nnoremap <leader>bd :bdelete<CR>
 " }
 
 " Navigation {
@@ -121,7 +129,7 @@ call plug#begin()
     " Plug 'mhinz/vim-startify'
 
 	" Statue line
-	Plug 'vim-airline/vim-airline'
+	" Plug 'vim-airline/vim-airline'
     
     " Plug 'andymass/vim-matchup'
     " Plug 'jiangmiao/auto-pairs'
@@ -148,8 +156,17 @@ call plug#begin()
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+    " Root dir
+    Plug 'airblade/vim-rooter'
+
+    Plug 'preservim/tagbar'
+
 call plug#end()
 
+
+
+
+set ruler
 " theme config
 source ~/.config/nvim/theme.vim
 " coc config 
@@ -180,10 +197,11 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 " }
 
 " fzf config {
-    nnoremap <C-p> :FZF<CR>
+    " nnoremap <C-p> :FZF<CR>
 " }
 
 " Telescop config {
+    nnoremap <C-p> :Telescop find_files<CR>
     nnoremap <leader>ff <cmd>Telescope find_files<cr>
     nnoremap <leader>fg <cmd>Telescope live_grep<cr>
     nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -194,6 +212,10 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 	let g:vim_json_syntax_conceal = 0
 " } 
 
+" vim-fugitive config {
+    nnoremap <leader>gb <CMD>G blame<CR>
+" }
+
 
 " nerdtree config {
 	" nnoremap <leader>n :NERDTreeFocus<CR>
@@ -201,6 +223,9 @@ autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 	nnoremap <leader>k :NERDTreeToggle<CR>
 	nnoremap <leader>l :NERDTreeFind<CR>
 " }
+" preservim/tagbar config {
+    nnoremap <leader>t :TagbarToggle<CR>
+" {
 
 hi Search ctermbg=Green
 " hi Search ctermfg=White
@@ -226,7 +251,18 @@ hi Search ctermbg=Green
 
 " airline config {
 	" show files in buffer
-	let g:airline#extensions#tabline#enabled = 1
+	" let g:airline#extensions#tabline#enabled = 1
+    " let g:airline#extensions#tabline#buffer_nr_show = 1
+    " let g:bufferline_echo = 0
+    " let g:airline#extensions#tabline#buffer_min_count =2
+    "" remove the filetype part
+    " let g:airline_section_x=''
+    " remove separators for empty sections
+    " let g:airline_skip_empty_sections = 1 
+    " set ambiwidth=double
+    " if ! has("gui_running")
+    "     let g:loaded_airline = 1
+    " endif
 " }
 
 
