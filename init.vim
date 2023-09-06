@@ -112,9 +112,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" show cursor line number and column number
-set ruler
-
 " python
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
