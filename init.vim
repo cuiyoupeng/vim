@@ -43,8 +43,6 @@ call plug#begin()
 	Plug 'mbbill/undotree'
     " quickly comment
 	Plug 'preservim/nerdcommenter'                          
-    " Plug 'andymass/vim-matchup'
-    Plug 'jiangmiao/auto-pairs'
     " change scope symbol
     Plug 'tpope/vim-surround'
     " format proto file
@@ -90,21 +88,24 @@ nnoremap <space> za
 nnoremap <leader>q <CMD>q<CR>
 
 " jump buffered file
+nnoremap <leader>bb :ls<CR>
 nnoremap <leader>bn :bnext<CR>     
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bd :bdelete<CR>
 
-" move line or visually selected block - alt+j/k
+" move line or visually selected block up/down a line.
 inoremap <C-j> <Esc>:m .+1<CR>==gi
 inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-" move split panes to left/bottom/top/right
-nnoremap <A-h> <C-W>H
-nnoremap <A-j> <C-W>J
-nnoremap <A-k> <C-W>K
-nnoremap <A-l> <C-W>L
+" move split panes to left/bottom/top/right  
+" use Ctrl+W H/J/K/L to replace.
+" nnoremap <A-h> <C-W>H
+" nnoremap <A-j> <C-W>J
+" nnoremap <A-k> <C-W>K
+" nnoremap <A-l> <C-W>L
+
 " move cursor to left/bottom/top/right pane
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -157,8 +158,8 @@ let g:neoformat_cpp_clangformat = {
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
 
-" hi Search ctermbg=Green
-" hi Search ctermfg=White
-
 " matchup config
 let g:matchup_surround_enabled = 1
+
+" set the project root directory
+let g:rooter_patterns = ['.git', 'Makefile', '*.sln', 'build/env.sh']

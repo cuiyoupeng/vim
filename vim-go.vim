@@ -28,9 +28,8 @@ let g:go_fmt_fail_silently = 1
 let g:go_fmt_experimental = 1
 let g:go_fmt_command = "golines"
 let g:go_fmt_options = {
-        'golines': '-m 128',
-        'tabwidth': '4',
-    }
+    \ 'golines': '-m 128',
+    \ }
 let g:go_play_open_browser = 1
 let g:go_addtags_transform = "snakecase"
 
@@ -44,8 +43,3 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-
-autocmd FileType go nmap <leader>b  <Plug>(go-build)
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
