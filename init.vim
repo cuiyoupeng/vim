@@ -157,3 +157,11 @@ let g:matchup_surround_enabled = 1
 
 " set the project root directory
 let g:rooter_patterns = ['.git', 'Makefile', '*.sln', 'build/env.sh']
+
+" Auto close quickfix window when it's the last window
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
+aug END
+ 
+
