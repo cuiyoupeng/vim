@@ -1,9 +1,11 @@
 " Theme
+" colorscheme murphy
 "
-set termguicolors       " enable true colors support
-set background=dark     " for the dark version
-let g:PaperColor_Theme = 'tonger'
-colorscheme PaperColor
+" PaperColor
+" set termguicolors       " enable true colors support
+" set background=dark     " for the dark version
+" let g:PaperColor_Theme = 'tonger'
+" colorscheme PaperColor
 " highlight LineNr ctermfg=green
 
 " " Enable 256-color mode
@@ -15,3 +17,24 @@ colorscheme PaperColor
 "     highlight clear LineNr
 "     highlight LineNr ctermfg=green
 " endif
+
+
+" onedark
+" colorscheme onedark
+
+
+" gruvbox
+autocmd vimenter * ++nested colorscheme gruvbox
+
+" xcode
+" colorscheme xcodedark
+
+" vim-code-dark
+" set t_Co=256
+" set t_ut=
+" colorscheme codedark
+
+" felipec
+" colorscheme felipec
+" let g:lightline = { 'colorscheme': 'felipec' }
+" let g:airline_theme = 'felipec'

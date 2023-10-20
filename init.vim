@@ -18,6 +18,7 @@ set backspace=indent,eol,start
 set background=dark
 set autochdir
 set laststatus=0 ruler
+set cursorline
 
 " leader key
 let mapleader = ","
@@ -57,6 +58,13 @@ call plug#begin()
     Plug 'preservim/tagbar'
     " navigate and highlight matching words
     Plug 'andymass/vim-matchup'
+
+    " theme
+    Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'arzg/vim-colors-xcode'
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'felipec/vim-felipec'
 call plug#end()
 
 source ~/.config/nvim/theme.vim
