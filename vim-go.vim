@@ -32,3 +32,13 @@ let g:go_highlight_variable_assignments = 1
 "     \ }
 let g:go_play_open_browser = 1
 let g:go_addtags_transform = "snakecase"
+let g:go_debug_mappings = {
+      \ '(go-debug-continue)': {'key': 'c', 'arguments': '<nowait>'},
+      \ '(go-debug-next)': {'key': 'n', 'arguments': '<nowait>'},
+      \ '(go-debug-step)': {'key': 's'},
+      \ '(go-debug-print)': {'key': 'p'},
+  \}
+map <leader>ds :GoDebugStart<cr>
+map <leader>dt :GoDebugStop<cr>
+map <leader>db :GoDebugBreakpoint<cr>
+
