@@ -2,8 +2,8 @@
 " colorscheme murphy
 "
 " PaperColor
-" set termguicolors       " enable true colors support
 " set background=dark     " for the dark version
+set termguicolors       " enable true colors support
 " let g:PaperColor_Theme = 'tonger'
 " colorscheme PaperColor
 " highlight LineNr ctermfg=green
@@ -24,10 +24,16 @@
 
 
 " gruvbox
-autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
 
 " xcode
-" colorscheme xcodedark
+colorscheme xcodehc
+augroup vim-colors-xcode
+    autocmd!
+augroup END
+
+autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
+autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
 " vim-code-dark
 " set t_Co=256
@@ -38,3 +44,4 @@ autocmd vimenter * ++nested colorscheme gruvbox
 " colorscheme felipec
 " let g:lightline = { 'colorscheme': 'felipec' }
 " let g:airline_theme = 'felipec'
+
