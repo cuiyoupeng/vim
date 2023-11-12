@@ -16,6 +16,7 @@ set ttyfast                  " Speed up scrolling in Vim
 set autowrite
 set backspace=indent,eol,start
 set background=dark
+set hlsearch
 set autochdir
 set laststatus=0 ruler
 
@@ -32,6 +33,8 @@ call plug#begin()
 	Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
     " switching between a single-line statement and a multi-line one
 	Plug 'AndrewRadev/splitjoin.vim'
+    " json
+	Plug 'elzr/vim-json'
     " git
 	Plug 'tpope/vim-fugitive'
     " file explore
@@ -109,6 +112,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" show cursor line number and column number
+set ruler
+
 " python
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
@@ -163,5 +169,3 @@ aug QFClose
   au!
   au WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
 aug END
- 
-
