@@ -19,6 +19,7 @@ set background=dark
 set hlsearch
 set autochdir
 set laststatus=0 ruler
+" set cursorline
 
 " leader key
 let mapleader = ","
@@ -37,6 +38,7 @@ call plug#begin()
 	Plug 'elzr/vim-json'
     " git
 	Plug 'tpope/vim-fugitive'
+ "   Plug 'airblade/vim-gitgutter'
     " file explore
 	Plug 'preservim/nerdtree'
     " file change history
@@ -60,6 +62,14 @@ call plug#begin()
     Plug 'preservim/tagbar'
     " navigate and highlight matching words
     Plug 'andymass/vim-matchup'
+
+    " theme
+    Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
+    Plug 'arzg/vim-colors-xcode'
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'felipec/vim-felipec'
+    Plug 'arzg/vim-colors-xcode'
 call plug#end()
 
 source ~/.config/nvim/theme.vim
@@ -67,6 +77,7 @@ source ~/.config/nvim/coc.vim
 source ~/.config/nvim/vim-go.vim
 source ~/.config/nvim/indent.vim
 source ~/.config/nvim/markdown.vim
+source ~/.config/nvim/json.vim
 
 " quickfix window
 map <C-n> :cnext<CR>
@@ -132,6 +143,14 @@ nnoremap <leader>gb <CMD>G blame<CR>
 nnoremap <leader>k :NERDTreeToggle<CR>
 nnoremap <leader>l :NERDTreeFind<CR>
 
+" nerdtree commenter
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDToggleCheckAllLines = 1
+
+
 " preservim/tagbar config {
 nnoremap <leader>t :TagbarToggle<CR>
 
@@ -169,3 +188,42 @@ aug QFClose
   au!
   au WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
 aug END
+ 
+" Auto close nerdtree when close vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+set signcolumn=number
+
+
+" set background transparent
+hi Normal guibg=NONE ctermbg=NONE
+
+" transparent bg
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+" For Vim<8, replace EndOfBuffer by NonText
+autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+
+" gitgutter
+" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+" nmap ]h <Plug>(GitGutterNextHunk)
+" nmap [h <Plug>(GitGutterPrevHunk)
+" let g:gitgutter
+" set signcolumn=yes
+" nnoremap <leader>gg <cmd>GitGutterToggle<cr>
+
+" set pumblend=80
+set pumheight=30
+" hi CocMenuSel ctermbg=237 guibg=#13354A
+
+" neovim register  <--> system clipboard
+" " Copy to clipboard
+" vnoremap  <leader>y  "+y
+" nnoremap  <leader>Y  "+yg_
+" nnoremap  <leader>y  "+y
+" nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+" nnoremap <leader>p "+p
+" nnoremap <leader>P "+P
+" vnoremap <leader>p "+p
+" vnoremap <leader>P "+P
