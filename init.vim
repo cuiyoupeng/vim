@@ -194,7 +194,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 set signcolumn=number
 
-
 " set background transparent
 hi Normal guibg=NONE ctermbg=NONE
 
