@@ -32,3 +32,4 @@ let g:go_highlight_variable_assignments = 1
 "     \ }
 let g:go_play_open_browser = 1
 let g:go_addtags_transform = "snakecase"
+" let g:go_build_tags='linux,windows,darwin'
