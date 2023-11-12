@@ -43,3 +43,13 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
+
+let g:go_debug_mappings = {
+      \ '(go-debug-continue)': {'key': 'c', 'arguments': '<nowait>'},
+      \ '(go-debug-next)': {'key': 'n', 'arguments': '<nowait>'},
+      \ '(go-debug-step)': {'key': 's'},
+      \ '(go-debug-print)': {'key': 'p'},
+  \}
+map <leader>ds :GoDebugStart<cr>
+map <leader>dt :GoDebugStop<cr>
+map <leader>db :GoDebugBreakpoint<cr>
