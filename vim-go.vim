@@ -33,7 +33,6 @@ let g:go_highlight_variable_assignments = 1
 let g:go_play_open_browser = 1
 let g:go_addtags_transform = "snakecase"
 
-
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')

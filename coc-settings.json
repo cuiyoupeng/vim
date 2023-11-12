@@ -12,7 +12,7 @@
         "buildDirectory": "build"
       }
     }
-  }
+  },
   // "suggest.completionItemKindLabels": {
   //   "constructor": "\ufb25",
   //   "keyword": "\uf1de",
