@@ -62,6 +62,8 @@ call plug#begin()
     Plug 'preservim/tagbar'
     " navigate and highlight matching words
     Plug 'andymass/vim-matchup'
+    " rust
+    Plug 'rust-lang/rust.vim'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -75,6 +77,7 @@ call plug#end()
 source ~/.config/nvim/theme.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/vim-go.vim
+source ~/.config/nvim/rust.vim
 source ~/.config/nvim/indent.vim
 source ~/.config/nvim/markdown.vim
 source ~/.config/nvim/json.vim

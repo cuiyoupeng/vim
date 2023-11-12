@@ -43,7 +43,6 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-<<<<<<< HEAD
 
 let g:go_debug_mappings = {
       \ '(go-debug-continue)': {'key': 'c', 'arguments': '<nowait>'},
@@ -54,5 +53,3 @@ let g:go_debug_mappings = {
 map <leader>ds :GoDebugStart<cr>
 map <leader>dt :GoDebugStop<cr>
 map <leader>db :GoDebugBreakpoint<cr>
-=======
->>>>>>> ft/optimize
