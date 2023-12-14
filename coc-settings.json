@@ -13,6 +13,9 @@
       }
     }
   },
+  "coc.preferences.noselect": false,
+  "coc.suggest.enableFloat": false,
+  "coc.signature.enable": false
   // "suggest.completionItemKindLabels": {
   //   "constructor": "\ufb25",
   //   "keyword": "\uf1de",

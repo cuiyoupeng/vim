@@ -19,7 +19,7 @@ set background=dark
 set hlsearch
 set autochdir
 set laststatus=0 ruler
-" set cursorline
+set cursorline
 
 " leader key
 let mapleader = ","
@@ -29,13 +29,13 @@ call plug#begin()
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'cypj/tonger-color'
     " lsp
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " go
 	Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
     " switching between a single-line statement and a multi-line one
 	Plug 'AndrewRadev/splitjoin.vim'
     " json
-	Plug 'elzr/vim-json'
+	" Plug 'elzr/vim-json'
     " git
 	Plug 'tpope/vim-fugitive'
  "   Plug 'airblade/vim-gitgutter'
@@ -52,7 +52,7 @@ call plug#begin()
     " show the code color
     Plug 'norcalli/nvim-colorizer.lua'
     " markdown preview
-    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
     " file explore | preview
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
@@ -64,6 +64,10 @@ call plug#begin()
     Plug 'andymass/vim-matchup'
     " rust
     Plug 'rust-lang/rust.vim'
+    " syntax check
+    " Plug 'dense-analysis/ale'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -74,6 +78,7 @@ call plug#begin()
     Plug 'arzg/vim-colors-xcode'
 call plug#end()
 
+" source ~/.config/nvim/vundle.vim
 source ~/.config/nvim/theme.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/vim-go.vim
@@ -99,7 +104,8 @@ set foldlevel=99
 " enable folding with the spacebar
 nnoremap <space> za
 " quickly exit
-nnoremap <leader>q <CMD>q<CR>
+" nnoremap <leader>q <CMD>q<CR>
+nnoremap <leader>q <CMD>close<CR>
 
 " jump buffered file
 nnoremap <leader>bb :ls<CR>
@@ -194,16 +200,6 @@ aug END
  
 " Auto close nerdtree when close vim
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-set signcolumn=number
-
-" set background transparent
-hi Normal guibg=NONE ctermbg=NONE
-
-" transparent bg
-autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
-" For Vim<8, replace EndOfBuffer by NonText
-autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
 
 " gitgutter
 " nnoremap <leader>fh <cmd>Telescope help_tags<cr>
