@@ -34,8 +34,6 @@ call plug#begin()
 	Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
     " switching between a single-line statement and a multi-line one
 	Plug 'AndrewRadev/splitjoin.vim'
-    " json
-	" Plug 'elzr/vim-json'
     " git
 	Plug 'tpope/vim-fugitive'
  "   Plug 'airblade/vim-gitgutter'
@@ -64,10 +62,10 @@ call plug#begin()
     Plug 'andymass/vim-matchup'
     " rust
     Plug 'rust-lang/rust.vim'
-    " syntax check
-    " Plug 'dense-analysis/ale'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    " github copilot
+    " Plug 'github/copilot.vim'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -85,7 +83,6 @@ source ~/.config/nvim/vim-go.vim
 source ~/.config/nvim/rust.vim
 source ~/.config/nvim/indent.vim
 source ~/.config/nvim/markdown.vim
-source ~/.config/nvim/json.vim
 
 " quickfix window
 map <C-n> :cnext<CR>

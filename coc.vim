@@ -1,7 +1,7 @@
 " LSP support
 "
 " custom node path
-let g:coc_node_path = '$HOME/App/node/bin/node'
+let g:coc_node_path = '/opt/node/bin/node'
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence

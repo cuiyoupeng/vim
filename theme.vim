@@ -39,6 +39,9 @@ augroup END
 autocmd vim-colors-xcode ColorScheme * hi Comment        cterm=italic gui=italic
 autocmd vim-colors-xcode ColorScheme * hi SpecialComment cterm=italic gui=italic
 
+" Vim Script
+" colorscheme monokai-pro
+
 " vim-code-dark
 " set t_Co=256
 " set t_ut=
