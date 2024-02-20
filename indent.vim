@@ -71,7 +71,7 @@ au FileType make set softtabstop=2
 au FileType make set tabstop=2
 
 " Language: Markdown
-au FileType markdown setlocal spell
+" au FileType markdown setlocal spell
 au FileType markdown set expandtab
 au FileType markdown set shiftwidth=4
 au FileType markdown set softtabstop=4
