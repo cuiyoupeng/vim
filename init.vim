@@ -1,5 +1,5 @@
 set ignorecase               " case insensitive 
-set mouse=v                  " middle-click paste with 
+set mouse=a                  " middle-click paste with 
 set hlsearch                 " highlight search 
 set incsearch                " incremental search
 set tabstop=4                " number of columns occupied by a tab 
@@ -19,7 +19,7 @@ set background=dark
 set hlsearch
 set autochdir
 set laststatus=0 ruler
-set cursorline
+" set cursorline
 
 " leader key
 let mapleader = ","
