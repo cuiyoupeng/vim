@@ -89,6 +89,9 @@ au FileType proto set expandtab
 au FileType proto set shiftwidth=2
 au FileType proto set softtabstop=2
 au FileType proto set tabstop=2
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
 
 " Language: Python
 au FileType python set expandtab

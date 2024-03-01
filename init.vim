@@ -65,7 +65,9 @@ call plug#begin()
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     " github copilot
-    " Plug 'github/copilot.vim'
+    Plug 'github/copilot.vim'
+    " smooth scrolling
+    Plug 'psliwka/vim-smoothie'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -83,6 +85,7 @@ source ~/.config/nvim/vim-go.vim
 source ~/.config/nvim/rust.vim
 source ~/.config/nvim/indent.vim
 source ~/.config/nvim/markdown.vim
+source ~/.config/nvim/copilot.vim
 
 " quickfix window
 map <C-n> :cnext<CR>
