@@ -66,8 +66,6 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     " github copilot
     Plug 'github/copilot.vim'
-    " smooth scrolling
-    Plug 'psliwka/vim-smoothie'
 
     " theme
     Plug 'joshdick/onedark.vim'
