@@ -66,6 +66,8 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
     " github copilot
     Plug 'github/copilot.vim'
+    " quickly move cursor
+    Plug 'easymotion/vim-easymotion'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -74,6 +76,9 @@ call plug#begin()
     Plug 'tomasiser/vim-code-dark'
     Plug 'felipec/vim-felipec'
     Plug 'arzg/vim-colors-xcode'
+
+    " code highlight
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " source ~/.config/nvim/vundle.vim
