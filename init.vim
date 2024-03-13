@@ -27,7 +27,7 @@ let mapleader = ","
 call plug#begin()
     " theme
     Plug 'NLKNguyen/papercolor-theme'
-    Plug 'cypj/tonger-color'
+    " Plug 'cypj/tonger-color'
     " lsp
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " go
@@ -76,9 +76,6 @@ call plug#begin()
     Plug 'tomasiser/vim-code-dark'
     Plug 'felipec/vim-felipec'
     Plug 'arzg/vim-colors-xcode'
-
-    " code highlight
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " source ~/.config/nvim/vundle.vim
