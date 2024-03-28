@@ -1,5 +1,5 @@
 set ignorecase               " case insensitive 
-set mouse=a                  " middle-click paste with 
+set mouse=                   " set value is a can use mouse sroll, but can't use clipboard copy.
 set hlsearch                 " highlight search 
 set incsearch                " incremental search
 set tabstop=4                " number of columns occupied by a tab 
@@ -9,7 +9,6 @@ set shiftwidth=4             " width for autoindents
 set number                   " add line numbers
 set wildmode=longest,list    " get bash-like tab completions
 syntax on                    " syntax highlighting
-set mouse=                   " enable mouse click
 set clipboard=unnamedplus    " using system clipboard
 filetype plugin on
 set ttyfast                  " Speed up scrolling in Vim
@@ -76,6 +75,7 @@ call plug#begin()
     Plug 'tomasiser/vim-code-dark'
     Plug 'felipec/vim-felipec'
     Plug 'arzg/vim-colors-xcode'
+    Plug 'xiantang/darcula-dark.nvim'
 call plug#end()
 
 " source ~/.config/nvim/vundle.vim
@@ -151,6 +151,10 @@ nnoremap <leader>gb <CMD>G blame<CR>
 " nerdtree
 nnoremap <leader>k :NERDTreeToggle<CR>
 nnoremap <leader>l :NERDTreeFind<CR>
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if winnr() == winnr('h') && bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+let g:NERDTreeWinSize=50
 
 " nerdtree commenter
 let g:NERDSpaceDelims = 1

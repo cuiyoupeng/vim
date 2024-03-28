@@ -13,6 +13,8 @@ if &term =~ "xterm-256color" || &term =~ "screen-256color" || &term =~ "screen"
     highlight LineNr ctermfg=green
 endif
 
+" colorscheme darcula-dark
+
 
 " colorscheme murphy
 
@@ -56,7 +58,7 @@ colorscheme PaperColor
 
 " DIY line number theme
 
-set signcolumn=number
+" set signcolumn=number
 
 " set background transparent
 " hi Normal guibg=NONE ctermbg=NONE
