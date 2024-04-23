@@ -35,7 +35,7 @@ call plug#begin()
 	Plug 'AndrewRadev/splitjoin.vim'
     " git
 	Plug 'tpope/vim-fugitive'
- "   Plug 'airblade/vim-gitgutter'
+    " Plug 'airblade/vim-gitgutter'
     " file explore
 	Plug 'preservim/nerdtree'
     " file change history
@@ -67,6 +67,8 @@ call plug#begin()
     Plug 'github/copilot.vim'
     " quickly move cursor
     Plug 'easymotion/vim-easymotion'
+    " git signs
+    Plug 'lewis6991/gitsigns.nvim'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -76,6 +78,7 @@ call plug#begin()
     Plug 'felipec/vim-felipec'
     Plug 'arzg/vim-colors-xcode'
     Plug 'xiantang/darcula-dark.nvim'
+    Plug 'jacoborus/tender.vim'
 call plug#end()
 
 " source ~/.config/nvim/vundle.vim
@@ -86,6 +89,8 @@ source ~/.config/nvim/rust.vim
 source ~/.config/nvim/indent.vim
 source ~/.config/nvim/markdown.vim
 source ~/.config/nvim/copilot.vim
+
+lua require("init")
 
 " quickfix window
 map <C-n> :cnext<CR>

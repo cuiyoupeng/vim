@@ -21,7 +21,13 @@ endif
 
 " PaperColor
 " let g:PaperColor_Theme = 'tonger'
-colorscheme PaperColor
+" colorscheme PaperColor
+
+
+colorscheme tender
+hi Normal guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
+hi StatusLine guibg=NONE guifg=#b3deef
 
 
 " onedark
