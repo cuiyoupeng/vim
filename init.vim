@@ -1,4 +1,5 @@
 set ignorecase               " case insensitive 
+set smartcase                " case sensitive if there is a capital letter
 set mouse=                   " set value is a can use mouse sroll, but can't use clipboard copy.
 set hlsearch                 " highlight search 
 set incsearch                " incremental search
@@ -69,6 +70,11 @@ call plug#begin()
     Plug 'easymotion/vim-easymotion'
     " git signs
     Plug 'lewis6991/gitsigns.nvim'
+    " smooth scrolling
+    Plug 'psliwka/vim-smoothie'
+
+    " indent line, but make vim slow, so I don't use it
+    " Plug 'lukas-reineke/indent-blankline.nvim'
 
     " theme
     Plug 'joshdick/onedark.vim'
@@ -79,6 +85,7 @@ call plug#begin()
     Plug 'arzg/vim-colors-xcode'
     Plug 'xiantang/darcula-dark.nvim'
     Plug 'jacoborus/tender.vim'
+    Plug 'danilo-augusto/vim-afterglow'
 call plug#end()
 
 " source ~/.config/nvim/vundle.vim
@@ -104,10 +111,11 @@ if has("autocmd")
 endif
 
 " enable folding
-set foldmethod=indent
-set foldlevel=99
+" set foldmethod=indent
+" set foldlevel=99
 " enable folding with the spacebar
-nnoremap <space> za
+" nnoremap <space> za
+
 " quickly exit
 " nnoremap <leader>q <CMD>q<CR>
 nnoremap <leader>q <CMD>close<CR>

@@ -21,10 +21,15 @@ endif
 
 " PaperColor
 " let g:PaperColor_Theme = 'tonger'
-" colorscheme PaperColor
+colorscheme PaperColor
 
+" gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
+" colorscheme gruvbox
 
-colorscheme tender
+" colorscheme afterglow
+
+" colorscheme tender
 hi Normal guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 hi StatusLine guibg=NONE guifg=#b3deef
