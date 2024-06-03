@@ -53,7 +53,7 @@ call plug#begin()
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
     " file explore | preview
     Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+    Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
     " project root dir
     Plug 'airblade/vim-rooter'
     " browse tags | overview of its structure
@@ -71,7 +71,7 @@ call plug#begin()
     " git signs
     Plug 'lewis6991/gitsigns.nvim'
     " smooth scrolling
-    Plug 'psliwka/vim-smoothie'
+    " Plug 'psliwka/vim-smoothie'
 
     " indent line, but make vim slow, so I don't use it
     " Plug 'lukas-reineke/indent-blankline.nvim'
