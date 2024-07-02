@@ -1,6 +1,6 @@
 set ignorecase               " case insensitive 
 set smartcase                " case sensitive if there is a capital letter
-set mouse=                   " set value is a can use mouse sroll, but can't use clipboard copy.
+set mouse=a                  " set value is a can use mouse sroll, but can't use clipboard copy.
 set hlsearch                 " highlight search 
 set incsearch                " incremental search
 set tabstop=4                " number of columns occupied by a tab 
