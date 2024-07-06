@@ -67,9 +67,9 @@ call plug#begin()
     " github copilot
     Plug 'github/copilot.vim'
     " quickly move cursor
-    Plug 'easymotion/vim-easymotion'
+    " Plug 'easymotion/vim-easymotion'
     " git signs
-    Plug 'lewis6991/gitsigns.nvim'
+    " Plug 'lewis6991/gitsigns.nvim' " may be high cpu usage when open a large
     " smooth scrolling
     " Plug 'psliwka/vim-smoothie'
 
