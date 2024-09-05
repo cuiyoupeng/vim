@@ -22,7 +22,7 @@ let g:go_highlight_string_spellcheck = 1
 let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
 let g:go_highlight_variable_assignments = 1
-" let g:go_metalinter_deadline = "2s"
+let g:go_metalinter_deadline = "1s"
 " let g:go_metalinter_autosave=1
 " let g:go_fmt_fail_silently = 1
 " let g:go_fmt_experimental = 1
@@ -31,7 +31,7 @@ let g:go_highlight_variable_assignments = 1
 "     \ 'golines': '-m 128',
 "     \ }
 let g:go_play_open_browser = 1
-let g:go_addtags_transform = "snakecase"
+let g:go_addtags_transform = "camelcase"
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()

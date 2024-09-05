@@ -54,6 +54,7 @@ call plug#begin()
     " file explore | preview
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+    Plug 'nvim-telescope/telescope-symbols.nvim'
     " project root dir
     Plug 'airblade/vim-rooter'
     " browse tags | overview of its structure
@@ -160,6 +161,12 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " git
 nnoremap <leader>gb <CMD>G blame<CR>
+" 自动关闭 vim-fugitive 窗口时，保存并退出 Vim
+augroup fugitive_autoclose
+  autocmd!
+  autocmd VimLeavePre * if exists(":Gstatus") | Gstatus! | endif
+  autocmd VimLeavePre * if exists(":Git") | Git! | endif
+augroup END
 
 " nerdtree
 nnoremap <leader>k :NERDTreeToggle<CR>
